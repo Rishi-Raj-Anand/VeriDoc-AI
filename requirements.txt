@@ -1,0 +1,9 @@
+streamlit
+PyMuPDF
+sentence-transformers
+faiss-cpu
+tiktoken
+requests
+deep-translator
+gTTS
+python-dotenv
