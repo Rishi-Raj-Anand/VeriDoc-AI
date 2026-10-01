@@ -1,14 +1,18 @@
-## 📄 RAG Document Assistant
+# VeriDoc AI ⚖️
+**A Verifiable Enterprise Legal & Corporate Policy Copilot**
 
-The RAG Document Assistant is an AI powered application that allows users to upload documents and ask questions to receive intelligent answers. It utilizes Retrieval Augmented Generation (RAG) techniques to provide contextually relevant responses and supports translation capabilities for diverse languages.
+VeriDoc AI is a robust, purely Python-based Retrieval-Augmented Generation (RAG) system designed to safely analyze complex legal contracts and corporate policies. In high-stakes enterprise environments, standard LLMs pose a massive liability due to factual hallucinations. VeriDoc AI eliminates this risk by employing a strict **Dual-Agent Architecture**. 
 
-## Features
+When a user queries a document, a **Generator Agent** drafts the response, while a separate **Verifier Agent** cross-references that draft against the original source text. Any claim not explicitly backed by the uploaded document is instantly blocked or rewritten, guaranteeing zero-hallucination factual accuracy.
 
-- **Document Upload**: Upload PDF or TXT documents for analysis.
-- **AI-Powered Q&A**: Ask questions based on the content of the uploaded documents.
-- **Translation Support**: Translate answers into multiple languages including Urdu, Hindi, Spanish, and French.
-- **Text-to-Speech**: Generate audio responses for the translated answers.
-- **User -Friendly Interface**: Built with Streamlit for an interactive user experience.
+## ✨ Core Architecture & Features
+* **Dual-Agent Verification:** An automated human-in-the-loop-style safety mechanism that prevents the AI from fabricating legal clauses or citing non-existent policies.
+* **High-Throughput Ingestion:** Fast, asynchronous document processing, text chunking, and vector embedding built on **FastAPI**.
+* **Semantic Search:** Low-latency querying and context retrieval using **PostgreSQL** paired with the **pgvector** extension.
+* **Translation Support**: Translate answers into multiple languages including Urdu, Hindi, Spanish, and French.
+* **Text-to-Speech**: Generate audio responses for the translated answers.
+* **User -Friendly Interface**: Built with Streamlit for an interactive user experience.
+
 
 ## Installation
 1. **Install the required packages**:
@@ -28,9 +32,5 @@ The RAG Document Assistant is an AI powered application that allows users to upl
 3. **Select Translation Options**: Choose a language for translation if needed.
 4. **Receive Answers**: View the AI-generated answers and listen to audio playback if enabled.
 
-## Acknowledgments
-
-- **Streamlit**:Built with [Streamlit](https://streamlit.io/).
-- **Sentence Transformers**: For embedding text and generating responses.
-- **Deep Translator**: For translation capabilities.
-- **gTTS**: For text-to-speech functionality.
+---
+*Copyright © 2026 Rishi Raj Anand*

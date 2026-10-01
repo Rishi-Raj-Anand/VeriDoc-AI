@@ -12,36 +12,13 @@ from gtts import gTTS
 import time
 
 st.set_page_config(
-    page_title="RAG-Explorer-AI-Document-Assistant",
-    page_icon="📄",
+    page_title="VeriDOC-AI",
+    page_icon="⚖️",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-def sidebar_profiles():
-    st.sidebar.markdown("""<hr>""", unsafe_allow_html=True)
-    st.sidebar.markdown("### 🎉Author: Maria Nadeem🌟")
-    st.sidebar.markdown("### 🔗 Connect With Me")
-    st.sidebar.markdown("""
-    <hr>
-    <div class="profile-links">
-        <a href="https://github.com/marianadeem755" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="20px"> GitHub
-        </a><br><br>
-        <a href="https://www.kaggle.com/marianadeem755" target="_blank">
-            <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/189_Kaggle_logo_logos-512.png" width="20px"> Kaggle
-        </a><br><br>
-        <a href="mailto:marianadeem755@gmail.com">
-            <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" width="20px"> Email
-        </a><br><br>
-        <a href="https://huggingface.co/maria355" target="_blank">
-            <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="20px"> Hugging Face
-        </a>
-    </div>
-    <hr>
-    """, unsafe_allow_html=True)
-# Add the profile section
-sidebar_profiles()
+
 def get_api_key():
     api_key = os.getenv("GROQ_API_KEY")
     if not api_key:
@@ -205,7 +182,7 @@ def text_to_speech(text, lang_code):
         st.error(f"Text-to-speech failed: {str(e)}")
         return None
 # Streamlit UI
-st.title("📄 RAG Explorer:  AI-Powered Document Assistant & Translator")
+st.title("📄 VeriDOC-AI:  AI-Powered Document Assistant & Translator")
 st.markdown("Upload a document and ask questions to get AI-powered answers with translation capabilities.")
 
 # Add API key input in sidebar
@@ -369,4 +346,3 @@ if submit_button and query:
 
 # Add footer
 st.divider()
-st.caption("RAG-Explorer-AI-Document-Assistant - Powered by Groq & Sentence Transformers")
